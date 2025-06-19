@@ -1,3 +1,4 @@
+// Production code
 import Login from "./pages/Login";
 import { Navigate, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
