@@ -6,6 +6,10 @@ A modern and responsive admin dashboard for managing products, categories, order
 
 ## 🌐 Live Demo
 
+> Login credentials:  
+> Email: admin@example.com  
+> Password: admin123
+
 🔗 [View Deployed App ] - (https://quick-commerce-brown.vercel.app)
 
 
