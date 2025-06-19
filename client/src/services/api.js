@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'http://localhost:5000/api', // Adjust the base URL as needed
+    baseURL: 'https://quick-commerce-mwc6.onrender.com/api', // Adjust the base URL as needed
 });
 
 export default API;
