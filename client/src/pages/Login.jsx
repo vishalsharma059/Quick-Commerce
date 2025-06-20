@@ -9,6 +9,7 @@ const Login = () => {
 
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // 👈 New state
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -28,12 +29,10 @@ const Login = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 space-y-8">
       <div className="flex flex-col items-center space-y-4">
-        <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center shadow-md ">
+        <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center shadow-md">
           <ShoppingCart className="text-white w-7 h-7" />
         </div>
-        <h1 className="mt-6 text-3xl font-bold text-gray-900">
-          Quick Commerce
-        </h1>
+        <h1 className="mt-6 text-3xl font-bold text-gray-900">Quick Commerce</h1>
       </div>
 
       {/* Login Box */}
@@ -45,11 +44,9 @@ const Login = () => {
         {error && <p className="text-red-600 text-sm mb-4">{error}</p>}
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="mb-4">
-            <label
-              className="block text-gray-700 font-medium mb-2"
-              htmlFor="email"
-            >
+          {/* Email Input */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2" htmlFor="email">
               Email Address
             </label>
             <div className="relative">
@@ -68,11 +65,9 @@ const Login = () => {
             </div>
           </div>
 
-          <div className="mb-6">
-            <label
-              className="block text-gray-700 font-medium mb-2"
-              htmlFor="password"
-            >
+          {/* Password Input */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-2" htmlFor="password">
               Password
             </label>
             <div className="relative">
@@ -81,7 +76,7 @@ const Login = () => {
               </div>
               <input
                 name="password"
-                type="password"
+                type={showPassword ? "text" : "password"} // 👈 Toggle here
                 required
                 value={form.password}
                 onChange={handleChange}
@@ -89,8 +84,20 @@ const Login = () => {
                 className="w-full px-4 pl-10 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
+            <div className="mt-2">
+              <label className="inline-flex items-center text-sm text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={showPassword}
+                  onChange={() => setShowPassword((prev) => !prev)}
+                  className="mr-2"
+                />
+                Show Password
+              </label>
+            </div>
           </div>
 
+          {/* Submit Button */}
           <button
             type="submit"
             className="cursor-pointer w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300"
@@ -104,3 +111,4 @@ const Login = () => {
 };
 
 export default Login;
+
