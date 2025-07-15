@@ -1,5 +1,5 @@
 # 🙋‍♂️ About Me
-Hi! I’m Vishal Sharma, a full-stack MERN developer passionate about building real-world platforms with strong UI/UX and secure backend architecture. I'd like to share the my IntelliConnect project that I've developed.
+Hi! I’m Vishal Sharma, a full-stack MERN developer passionate about building real-world platforms with strong UI/UX and secure backend architecture. I'd like to share the my Quick Commerce project that I've developed.
 
 If you use this project or get inspired by it, ⭐ please consider giving it a star on GitHub! or a simple mention – it truly helps and is appreciated! 🙏
 
